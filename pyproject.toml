@@ -7,7 +7,11 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
+<<<<<<< HEAD
 requires-python = ">=3.12,<4.0"
+=======
+requires-python = ">=3.12,<3.13"
+>>>>>>> stg
 dependencies = [
     "langchain (>=0.3.15,<0.4.0)",
     "langchain-openai (>=0.3.2,<0.4.0)",
@@ -21,6 +25,18 @@ dependencies = [
     "llama-index (>=0.12.14,<0.13.0)",
     "llama-index-llms-ollama (>=0.5.0,<0.6.0)",
     "llama-index-embeddings-huggingface (>=0.5.1,<0.6.0)",
+<<<<<<< HEAD
+=======
+    "smolagents (>=1.7.0,<2.0.0)",
+    "redis (>=5.2.1,<6.0.0)",
+    "langchain-redis (>=0.1.2,<0.2.0)",
+    "langgraph (>=0.2.73,<0.3.0)",
+    "tavily-python (>=0.5.1,<0.6.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "python-pptx (>=1.0.2,<2.0.0)",
+    "python-docx (>=1.1.2,<2.0.0)",
+    "markdown (>=3.7,<4.0)",
+>>>>>>> stg
 ]
 
 
@@ -35,3 +51,12 @@ black = "^24.10.0"
 isort = "^5.13.2"
 faiss-cpu = "^1.9.0.post1"
 
+<<<<<<< HEAD
+=======
+
+[tool.poetry.group.data-processing.dependencies]
+unstructured = "^0.16.23"
+opencv-python = "^4.11.0.86"
+pytesseract = "^0.3.13"
+
+>>>>>>> stg

@@ -50,6 +50,7 @@ pnpm-lock.yaml
 
 .streamlit/
 *.sqlite
+<<<<<<< HEAD
 .local
 
 
@@ -94,3 +95,9 @@ yarn-error.log*
 next-env.d.ts
 
 .env
+=======
+local_vectorstore/
+
+data/
+local_cache/
+>>>>>>> stg
