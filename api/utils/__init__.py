@@ -1,2 +1,2 @@
 from .utils import load_api_kwargs
-from .config import *
+from .grpc_client import *

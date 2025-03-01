@@ -1,29 +1,30 @@
-# Environments
-*env
+# Environment files and directories
 .env
+.env*.local
+*env
+env/
+.local
+.streamlit/
 
-
-# Byte-compiled / optimized / DLL files
+# Python bytecode and cache
 __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
+# Data, cache and local storage
+data/
+local_vectorstore/
+local_cache/
+*.sqlite
 
-# Distribution / packaging
+# Python package and distribution
 .Python
-env/
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
 .eggs/
-<<<<<<< HEAD
-lib/
-=======
->>>>>>> stg-2
 lib64/
 parts/
 sdist/
@@ -32,80 +33,46 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.build/
 
-# Default Visual Studio Code workspace settings
-.vscode/
+# C extensions
+*.so
 
-# Egg cache
-*.egg-info
-
-# Sphinx documentation
+# Documentation build files
 docs/_build
 
-# PyInstaller
-dist/
-<<<<<<< HEAD
-.build/
-=======
-.build/
+# IDE settings
+.vscode/
 
+# MacOS system files
 .DS_Store
 research/.DS_Store
+*.pem
 
-node_modules/
-pnpm-lock.yaml
-
-.streamlit/
-*.sqlite
-<<<<<<< HEAD
-.local
-
-
-data/
-
-
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# JavaScript and web dependencies
 /node_modules
+node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+pnpm-lock.yaml
 
-# testing
+# JavaScript testing
 /coverage
 
-# next.js
+# Next.js build outputs
 /.next/
 /out/
-
-# production
 /build
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# JavaScript logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-
-# vercel
+# Deployment
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
-
-.env
-=======
-local_vectorstore/
-
-data/
-local_cache/
->>>>>>> stg
->>>>>>> stg-2

@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import List
-from data_models.documents import DocumentChunk
+from models.documents import DocumentChunk
 
 class Message(BaseModel):
     message_id: str

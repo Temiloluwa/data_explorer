@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import List, Dict
 from .models import Document, DocumentChunk, QuestionWithDocumentChunks, Answer
-from .service import check_if_document_has_been_ingested
+from ..utils.utils import check_if_document_has_been_ingested
 import uuid
 
 router = APIRouter()
@@ -13,6 +13,8 @@ def ingest_document(document: Document):
         pass
     
     return f"Document {document.document_id} ingested successfully"
+
+
 
 
 @router.get("/retrieve_documents/{document_id}", response_model=Document)

@@ -6,7 +6,7 @@ from core.data_models import Document
 from core.exceptions import IngestionError
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
-from retrievers.vector_store import VectorStore
+from services.core.vector_store import VectorStore
 from tqdm.asyncio import tqdm
 
 

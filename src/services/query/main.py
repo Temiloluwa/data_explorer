@@ -3,7 +3,7 @@ from config import settings
 from core.data_models import QueryResult
 from core.exceptions import RetrievalError
 from langchain_core.runnables import RunnableLambda
-from retrievers.vector_store import VectorStore
+from services.core.vector_store import VectorStore
 
 
 class QueryService:
