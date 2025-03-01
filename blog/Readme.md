@@ -1,3 +1,3 @@
 # Blog
 
-Blog for Data Explorer
+Blog for data-explorer

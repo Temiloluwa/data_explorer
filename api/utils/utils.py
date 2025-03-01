@@ -1,8 +1,8 @@
 def load_api_kwargs():
     """ Fast API kwargs """
     kwargs = {
-            "title": "Data Explorer",
-            "description": "A Backend Rest API for Data Explorer",
+            "title": "data-explorer",
+            "description": "A Backend Rest API for data-explorer",
             "summary": """
                 This is an application that provides a backend service for multiple Vision - Language apps.
             """,
