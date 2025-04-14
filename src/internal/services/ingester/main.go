@@ -1,0 +1,5 @@
+package ingester
+
+func main() {
+
+}

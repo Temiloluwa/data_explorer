@@ -1,8 +1,0 @@
-# API CONFIG
-ALLOWED_ORIGINS = ["*"]
-
-
-# MODEL CONFIG
-TEMPERATURE = 0
-MODEL = 'gpt-3.5-turbo'
-
