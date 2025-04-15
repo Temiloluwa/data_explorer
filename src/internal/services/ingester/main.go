@@ -1,5 +1,0 @@
-package ingester
-
-func main() {
-
-}

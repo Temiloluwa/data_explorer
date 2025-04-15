@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package dataexplorer.v1;
+
+import "google/api/annotations.proto"; // For REST gateway
+
+// Update this path to match your actual module structure if different
+option go_package = "github.com/yourusername/data-explorer/api/proto/dataexplorer/v1;dataexplorerv1";
+
+// The main service for asking questions
+service DataExplorerService {
+  // Asks a question and receives an answer
+  rpc AskQuestion(AskQuestionRequest) returns (AskQuestionResponse) {
+    option (google.api.http) = {
+      post: "/v1/questions:ask"
+      body: "*"
+    };
+  }
+}
+
+// Request message for asking a question
+message AskQuestionRequest {
+  string query = 1;         // The user's question
+  repeated DataSource sources = 2; // Optional: Specify which sources to query
+  map<string, string> options = 3; // Optional: Source-specific options (e.g., "local.max_files":"10")
+}
+
+// Response message containing the answer
+message AskQuestionResponse {
+  string answer = 1;        // The generated answer
+  repeated SourceDocument sources_used = 2; // Information about the sources used
+  string error = 3;         // Any error message if processing failed (consider using google.rpc.Status for richer errors)
+}
+
+// Represents a data source type and identifier
+message DataSource {
+  string type = 1; // e.g., "web", "local", "db_postgres", "api_xyz"
+  string identifier = 2; // Optional: Specific identifier if needed for selection (e.g., specific db connection name)
+}
+
+// Represents a document or piece of data used to formulate the answer
+message SourceDocument {
+  string source_type = 1;  // e.g., "web", "local_file", "db_row"
+  string identifier = 2; // e.g., URL, file path, table/row id
+  string content_snippet = 3; // Relevant snippet of the source content
+  float relevance_score = 4; // How relevant this source was (optional)
+}

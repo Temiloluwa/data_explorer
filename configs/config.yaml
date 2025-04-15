@@ -1,0 +1,23 @@
+log:
+  level: debug # Overrides default (options: debug, info, warn, error)
+
+server:
+  grpc_port: :50051
+  rest_port: :8081 # Override default (:8080)
+
+datasources:
+  web_search:
+    enable: true
+    # api_key: "YOUR_SEARCH_API_KEY" # Better to use env var: DATAEXPLORER_DATASOURCES_WEB_SEARCH_API_KEY
+  local_files:
+    enable: true
+    watch_paths:
+      - ./local_docs # Example relative path (create this dir if needed)
+      # - /path/to/your/docs # Example absolute path
+  # db_postgres: # Example for DB config
+  #   enable: false
+  #   connection_string: "postgres://user:password@host:port/dbname?sslmode=disable" # Use env var for sensitive parts
+  # api_someapi: # Example for external API config
+  #   enable: false
+  #   base_url: "https://api.example.com"
+  #   api_key: "YOUR_OTHER_API_KEY" # Use env var
